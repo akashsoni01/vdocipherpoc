@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3AC921385C60DAFAEED0C40 /* Pods_VdocipherPOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE653914854ECB5557EE405 /* Pods_VdocipherPOC.framework */; };
 		FF065E7C212A9648000D670C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF065E7B212A9648000D670C /* AppDelegate.swift */; };
 		FF065E7E212A9648000D670C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF065E7D212A9648000D670C /* ViewController.swift */; };
 		FF065E81212A9648000D670C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF065E7F212A9648000D670C /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BE653914854ECB5557EE405 /* Pods_VdocipherPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VdocipherPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		721E752609E5BC0B5C88DD4D /* Pods-VdocipherPOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VdocipherPOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-VdocipherPOC/Pods-VdocipherPOC.release.xcconfig"; sourceTree = "<group>"; };
+		A55B11955625E04E44C5A464 /* Pods-VdocipherPOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VdocipherPOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VdocipherPOC/Pods-VdocipherPOC.debug.xcconfig"; sourceTree = "<group>"; };
 		FF065E78212A9648000D670C /* VdocipherPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VdocipherPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF065E7B212A9648000D670C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF065E7D212A9648000D670C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AC921385C60DAFAEED0C40 /* Pods_VdocipherPOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C95E19BB80AA4A30497CFAA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A55B11955625E04E44C5A464 /* Pods-VdocipherPOC.debug.xcconfig */,
+				721E752609E5BC0B5C88DD4D /* Pods-VdocipherPOC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CC8DA89860E592A5983B865E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BE653914854ECB5557EE405 /* Pods_VdocipherPOC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF065E6F212A9648000D670C = {
 			isa = PBXGroup;
 			children = (
 				FF065E7A212A9648000D670C /* VdocipherPOC */,
 				FF065E79212A9648000D670C /* Products */,
+				C95E19BB80AA4A30497CFAA7 /* Pods */,
+				CC8DA89860E592A5983B865E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF065E8A212A964A000D670C /* Build configuration list for PBXNativeTarget "VdocipherPOC" */;
 			buildPhases = (
+				C9F2CC93F832EC1B12DDA2C1 /* [CP] Check Pods Manifest.lock */,
 				FF065E74212A9648000D670C /* Sources */,
 				FF065E75212A9648000D670C /* Frameworks */,
 				FF065E76212A9648000D670C /* Resources */,
+				6E8AC8964E92D033CDDCA6A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E8AC8964E92D033CDDCA6A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VdocipherPOC/Pods-VdocipherPOC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VdocipherPOC/Pods-VdocipherPOC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9F2CC93F832EC1B12DDA2C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VdocipherPOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF065E74212A9648000D670C /* Sources */ = {
@@ -278,6 +345,7 @@
 		};
 		FF065E8B212A964A000D670C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A55B11955625E04E44C5A464 /* Pods-VdocipherPOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +363,7 @@
 		};
 		FF065E8C212A964A000D670C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721E752609E5BC0B5C88DD4D /* Pods-VdocipherPOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
